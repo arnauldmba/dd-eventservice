@@ -15,8 +15,8 @@
     --color-bg-light: #f9fafb;
     --color-border: #d1d5db;
     --color-overlay: rgba(0, 0, 0, 0.4);
-    --color-overlay-dark: rgba(0, 0, 0, 0.288);
-    --color-whatsapp: #25d366;
+    --color-overlay-dark: rgba(0, 0, 0, 0.4);
+    --color-whatsapp: #106f33;
     --color-blue-hover: rgba(30, 58, 138, 0.3);
 
     /* Typographie */
@@ -25,7 +25,7 @@
     --font-weight-normal: 100;
     --font-weight-normal-2: 200;
     --font-weight-normal-3: 300;
-    --font-weight-normal-3: 400;
+    --font-weight-normal-4: 400;
     --font-weight-medium: 600;
     --font-weight-bold: 700;
 
@@ -537,7 +537,6 @@ section {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    gap: var(--spacing-md);
     margin-bottom: var(--spacing-md);
 }
 
@@ -555,6 +554,7 @@ section {
     font-weight: var(--font-weight-normal-3);
     /*color: var(--color-text-light);*/
     margin-bottom: var(--spacing-sm);
+    margin-left: 10px;
 }
 
 .delivery-image {
@@ -713,23 +713,6 @@ section {
         font-family: var(--font-primary);
     }
 
-    .btn2, .btn-hero {
-        padding: 8px 32px;
-        font-size: 12px;
-        font-weight: 100;
-        border: none;
-    }
-
-    .btn-hero-color {
-        background-color: white;
-        color: var(--color-primary-dark);
-    }
-
-    .btn2 {
-        color: var(--color-text-white);
-        border: 1px solid var(--color-text-white);
-    }
-
     .product-grid {
         grid-template-columns: 1fr;
     }
@@ -764,16 +747,17 @@ section {
     }
 
     .cta-buttons {
-        display: flex;
+        display: none;
+        /*display: flex;
         justify-content: center;
-        width: 100%;
+        width: 100%;*/
     }
 
     .hero-content-description {
         display: flex;
         flex-direction: column;
         align-items: center;
-        top: 84%;
+        top: 90%;
         left: 50%;
         transform: translate(-50%, -50%);
         position: absolute;
@@ -784,8 +768,9 @@ section {
     .hero-content-description h1{
         color: white;
         text-align: center;
-        font-size: var(--font-size-sm);
-        font-weight: 100;
+        font-size: var(--font-size-lg);
+        font-weight: var(--font-weight-normal-3);
+        font-family: var(--font-heading);
     }
 
     .contact-form, .contact-info {
