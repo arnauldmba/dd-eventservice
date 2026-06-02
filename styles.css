@@ -582,7 +582,6 @@ section {
     font-size: var(--font-size-base);
     font-weight: var(--font-weight-normal-3);
     text-align: left;
-    color: red;
     width: 100%;
     word-break: break-word;
 }
@@ -643,6 +642,9 @@ section {
 .info-item p {
     color: var(--color-text-light);
     margin: 0px;
+    width: 100%;
+    word-break: break-word;
+    text-align: left;
 }
 
 /* Footer */
@@ -724,7 +726,6 @@ section {
 
     .delivery-content {
         flex-direction: column-reverse;
-        border: 1px solid red;
     }
 
     .contact-content {
@@ -745,12 +746,11 @@ section {
         gap: 8px;
     }
 
-    /*
     .overlay {
         position: absolute;
         inset: 0;
         background: var(--color-overlay-dark);
-    }*/
+    }
 
     .cta-buttons {
         display: none;
