@@ -1,7 +1,8 @@
 /* Variables CSS */
 :root {
     /* Couleurs */
-    --color-primary: #1e3a8a;
+   /* --color-primary: #1e3a8a;*/
+    --color-primary:  black;
     --color-primary-dark: #0e1858;
     --color-accent: #f59e0b;
     --color-accent-hover: #d97706;
@@ -13,17 +14,19 @@
     --color-bg: #fff;
     --color-bg-light: #f9fafb;
     --color-border: #d1d5db;
-    --color-overlay: rgba(0, 0, 0, 0.1);
+    --color-overlay: rgba(0, 0, 0, 0.4);
     --color-overlay-dark: rgba(0, 0, 0, 0.288);
     --color-whatsapp: #25d366;
     --color-blue-hover: rgba(30, 58, 138, 0.3);
 
     /* Typographie */
-    --font-primary: 'Inter', sans-serif;
-    --font-heading: 'Poppins', sans-serif;
+    --font-primary: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    --font-heading: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
     --font-weight-normal: 100;
-    --font-weight-2normal: 200;
-    --font-weight-medium: 500;
+    --font-weight-normal-2: 200;
+    --font-weight-normal-3: 300;
+    --font-weight-normal-3: 400;
+    --font-weight-medium: 600;
     --font-weight-bold: 700;
 
     /* Tailles de texte */
@@ -120,7 +123,7 @@ h1, h2, h3, h4, h5, h6 {
 .logo h1 {
     color: var(--color-text-white);
     font-size: var(--font-size-xl);
-    font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-normal-2);
     font-family: var(--font-heading);
 }
 
@@ -136,7 +139,7 @@ h1, h2, h3, h4, h5, h6 {
 .nav-links a {
     color: var(--color-text-white);
     text-decoration: none;
-    font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-normal-2);
     font-family: var(--font-heading);
     transition: color var(--transition-fast);
 }
@@ -213,22 +216,17 @@ h1, h2, h3, h4, h5, h6 {
   background: var(--color-overlay);
 }
 
-.hero-content h1 {
-    font-size: var(--font-size-4xl);
-    font-weight: var(--font-weight-bold);
-}
-
 .hero-content-description {
     position: absolute;
-    top: 22%;
-    left: 28%;
+    bottom: 40%;
+    left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
 }
 
 .hero-content-description h1 {
     font-size: var(--font-size-xl);
-    color: var(--color-primary-dark);
+    color: white;
     font-weight: var(--font-weight-medium);
 }
 
@@ -242,78 +240,47 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: var(--spacing-md);
     display: flex;
     gap: var(--spacing-md);
-    justify-content: start;
+    justify-content: center;
 }
 
 /* Buttons */
 .btn {
     display: inline-block;
-    padding: 12px 54px;
-    border: none;
-    text-decoration: none;
-    font-weight: var(--font-weight-normal);
-    transition: var(--transition-smooth);
-    cursor: pointer;
-    font-size: var(--font-size-base);
-}
-
-.btn2 {
-    display: flex;
-    align-items: center;
     padding: 10px 40px;
-    justify-content: center;
-    border: none;
-    /*border-radius: var(--radius-sm);*/
     text-decoration: none;
-    font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-normal-2);
     transition: var(--transition-smooth);
     cursor: pointer;
     font-size: var(--font-size-base);
-}
-
-.btn-hero {
-    display: flex;
-    align-items: center;
-    padding: 10px 40px;
-    justify-content: center;
-    border: none;
-    /*border-radius: var(--radius-sm);*/
-    text-decoration: none;
-    font-weight: var(--font-weight-normal);
-    transition: var(--transition-smooth);
-    cursor: pointer;
-    font-size: var(--font-size-base);
-}
-
-.btn-hero-no-background {
-    display: flex;
-    align-items: center;
-    padding: 10px 20px;
-    justify-content: center;
-    border: 1px solid var(--color-primary);
-    border-radius: var(--radius-sm);
-    text-decoration: none;
-    font-weight: var(--font-weight-normal);
-    transition: var(--transition-smooth);
-    cursor: pointer;
-    font-size: var(--font-size-base);
-}
-
-.btn-hero-color {
-    background-color: var(--color-primary-dark);
     color: var(--color-text-white);
+    background-color: var(--color-primary);
 }
 
-.btn-hero:hover {
-    background-color: var(--color-accent);
+.btn:hover {
+    background-color: white;
     color: var(--color-primary);
     transform: translateY(-2px);
     box-shadow: var(--shadow-accent);
 }
 
-.btn-primary {
-    background-color: var(--color-accent);
+.btn-no-background {
+    display: inline-block;
+    padding: 10px 40px;
+    text-decoration: none;
+    font-weight: var(--font-weight-normal-2);
+    transition: var(--transition-smooth);
+    cursor: pointer;
+    font-size: var(--font-size-base);
     color: var(--color-text-white);
+    border: 1px solid var(--color-text-white);
+}
+
+.btn-no-background:hover {
+    background-color: var(--color-text-white);
+    color: var(--color-primary);
+    border: none;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-accent);
 }
 
 .btn-primary:hover {
@@ -324,8 +291,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-secondary {
     background-color: transparent;
-    color: var(--color-primary);
-    border: 1px solid var(--color-primary);
+    color: white;
+    /*color: var(--color-primary);*/
+    border: 1px solid white;
 }
 
 .btn-secondary:hover {
@@ -365,22 +333,18 @@ section {
     padding: var(--section-padding);
 }
 
-.about h2 {
-    margin-bottom: var(--spacing-md);
-    color: var(--color-primary);
-    font-weight: var(--font-weight-medium);
-    font-size: var(--font-size-3xl);
+.about .computer{
+    text-align: center;
 }
 
 .about p{
     font-size: var(--font-size-base);
-    font-weight: 200;
+    font-weight: 300;
     color: var(--color-text);
-    max-width: 800px;
     margin: 0 auto;
 }
 
-.products h2, .delivery h2, .contact h2 {
+.about h2, .products h2, .delivery h2, .contact h2 {
     text-align: center;
     margin-bottom: var(--spacing-md);
     color: var(--color-primary);
@@ -391,7 +355,7 @@ section {
 .products p, .contact p {
     text-align: center;
     font-size: var(--font-size-base);
-    font-weight: 200;
+    font-weight: var(--font-weight-normal-3);
     color: var(--color-text);
     max-width: 800px;
     margin: 0 auto;
@@ -444,20 +408,21 @@ section {
     transition: transform var(--transition-fast);
 }
 
-.feature:hover .feature-icon {
+.feature:hover {
     transform: scale(1.1);
 }
 
 .feature-title {
-    font-size: var(--font-size-lg);
-    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-normal-bold);
     color: var(--color-primary);
     margin-bottom: var(--spacing-sm);
     font-family: var(--font-heading);
 }
 
 .feature-desc {
-    font-size: var(--font-size-base);
+    font-family: var(--font-primary);
+    font-size: var(--font-size-sm);
     color: var(--color-text-light);
     line-height: 1;
 }
@@ -482,6 +447,18 @@ section {
 .product-card:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-lg);
+    background-color: var(--color-primary);
+}
+
+.product-card:hover h3,
+.product-card:hover span,
+.product-card:hover p {
+    color: var(--color-text-white);
+}
+
+.product-card:hover a {
+    background-color: var(--color-text-white);
+    color: var(--color-primary);
 }
 
 .product-card img {
@@ -492,8 +469,8 @@ section {
 
 .product-card h3 {
     font-size: var(--font-size-2xl);
-    font-weight: 500;
-    color: var(--color-primary-dark);
+    font-weight: var(--font-weight-normal-3);
+    color: var(--color-primary);
     margin-top: 8px;
     text-align: left;
 }
@@ -501,7 +478,7 @@ section {
 /*test commit*/
 .product-card p {
     font-size: var(--font-size-base);
-    color: var(--color-text-light);
+    font-weight: var(--font-weight-normal-2);
     padding: 0px;
     text-align: left;
 }
@@ -539,7 +516,7 @@ section {
 
 .price{
     display: inline-block;
-    color: var(--color-primary-dark);
+    color: var(--color-primary);
     font-family: var(--font-heading);
     font-size: var(--font-size-xl);
     font-weight: var(--font-weight-normal);
@@ -574,8 +551,9 @@ section {
 }
 
 .delivery-text p {
-    font-size: var(--font-size-lg);
-    color: var(--color-text-light);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-normal-3);
+    /*color: var(--color-text-light);*/
     margin-bottom: var(--spacing-sm);
 }
 
@@ -709,6 +687,10 @@ section {
         font-size: var(--font-size-sm);
     }
 
+    .about h2 {
+        text-align: start;
+    }
+
     .computer{
         display: none;
     }
@@ -772,6 +754,7 @@ section {
 
     .mobile{
         display: block;
+        gap: 8px;
     }
 
     .overlay {
