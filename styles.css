@@ -542,7 +542,7 @@ section {
     color: var(--color-primary-dark);
     font-family: var(--font-heading);
     font-size: var(--font-size-xl);
-    font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-normal);
 }
 
 .product-card button {
@@ -559,6 +559,7 @@ section {
 .delivery-option {
     display: flex;
     align-items: center;
+    justify-content: flex-start;
     gap: var(--spacing-md);
     margin-bottom: var(--spacing-md);
 }
@@ -638,16 +639,16 @@ section {
 }
 
 .contact-style {
-    padding: var(--spacing-xl);
     border-radius: var(--radius-lg);
     background-color: var(--color-bg);
     box-shadow: var(--shadow-md);
+    padding: var(--spacing-lg);
 }
 
 .info-item {
     display: flex;
     align-items: center;
-    margin-bottom: var(--spacing-md);
+    justify-content: flex-start;
 }
 
 .info-item i {
@@ -849,6 +850,12 @@ section {
         font-weight: 200;
         color: black;
         line-height: 1.2;
+    }
+
+    .title-price {
+        display: grid;
+        /*grid-template-columns: 1fr auto;
+        gap: var(--spacing-sm);*/
     }
 }
 
