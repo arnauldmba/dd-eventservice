@@ -555,9 +555,9 @@ section {
 .delivery-text p {
     font-size: var(--font-size-base);
     font-weight: var(--font-weight-normal-3);
-    /*color: var(--color-text-light);*/
     margin-bottom: var(--spacing-sm);
     margin-left: 10px;
+    text-align: left;
 }
 
 .delivery-image {
@@ -724,7 +724,6 @@ section {
 
     .delivery-content {
         flex-direction: column-reverse;
-        text-align: center;
     }
 
     .contact-content {
@@ -745,11 +744,12 @@ section {
         gap: 8px;
     }
 
+    /*
     .overlay {
         position: absolute;
         inset: 0;
         background: var(--color-overlay-dark);
-    }
+    }*/
 
     .cta-buttons {
         display: none;
