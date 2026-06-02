@@ -835,7 +835,7 @@ section {
 
     .btn, .btn-no-background  {
         display: inline-block;
-        padding: 6px 26px;
+        padding: 8px 28px;
         font-size: var(--font-size-sm);
     }
 
