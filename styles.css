@@ -469,7 +469,7 @@ section {
 
 .product-card h3 {
     font-size: var(--font-size-2xl);
-    font-weight: var(--font-weight-normal-3);
+    font-weight: var(--font-weight-normal-4);
     color: var(--color-primary);
     margin-top: 8px;
     text-align: left;
@@ -478,7 +478,7 @@ section {
 /*test commit*/
 .product-card p {
     font-size: var(--font-size-base);
-    font-weight: var(--font-weight-normal-2);
+    font-weight: var(--font-weight-normal-3);
     padding: 0px;
     text-align: left;
 }
@@ -519,7 +519,7 @@ section {
     color: var(--color-primary);
     font-family: var(--font-heading);
     font-size: var(--font-size-xl);
-    font-weight: var(--font-weight-normal);
+    font-weight: var(--font-weight-normal-2);
 }
 
 .product-card button {
@@ -542,6 +542,9 @@ section {
 
 .delivery-text {
     flex: 1;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
 }
 
 .delivery-text h2 {
@@ -568,7 +571,7 @@ section {
     box-shadow: var(--shadow-md);
 }
 
-.delivery-content span {
+.delivery-content i {
     border: none;
     width: 54px;
     height: 54px;
@@ -594,6 +597,7 @@ section {
 
 .contact-form, .contact-info {
     flex: 1;
+    width: 100%;
 }
 
 .contact-form form {
@@ -621,6 +625,7 @@ section {
     background-color: var(--color-bg);
     box-shadow: var(--shadow-md);
     padding: var(--spacing-lg);
+    width: 100%;
 }
 
 .info-item {
@@ -632,7 +637,7 @@ section {
 .info-item i {
     color: var(--color-accent);
     margin-right: 16px;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .info-item p {
@@ -793,9 +798,6 @@ section {
         text-align: center;
         margin-top: 48px;
         padding: var(--spacing-sm);
-        /*border-radius: var(--radius-lg);
-        background-color: var(--color-bg);
-        box-shadow: var(--shadow-md);*/
         transition: transform var(--transition-fast), box-shadow var(--transition-fast);
     }
 
@@ -808,14 +810,14 @@ section {
 
     .feature-title {
         font-size: var(--font-size-xs);
-        font-weight: var(--font-weight-bold);
+        font-weight: var(--font-weight-medium);
         color: var(--color-primary);
         margin-bottom: var(--spacing-sm);
     }
 
     .feature-desc {
         font-size: 11px;
-        font-weight: 200;
+        font-weight: 300;
         color: black;
         line-height: 1.2;
     }
