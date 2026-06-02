@@ -552,14 +552,6 @@ section {
     text-align: left;
 }
 
-.delivery-text p {
-    font-size: var(--font-size-base);
-    font-weight: var(--font-weight-normal-3);
-    margin-bottom: var(--spacing-sm);
-    margin-left: 10px;
-    text-align: left;
-}
-
 .delivery-image {
     flex: 1;
     text-align: center;
@@ -571,21 +563,29 @@ section {
     box-shadow: var(--shadow-md);
 }
 
-.delivery-content i {
+.delivery-option i {
     border: none;
     width: 54px;
     height: 54px;
     display: flex;
+    flex-shrink: 0;
     align-items: center;
     justify-content: center;
     border-radius: var(--radius-md);
     background-color: var(--color-accent);
     color: var(--color-text-white);
+    font-size: 1.5rem;
+    margin-right: var(--spacing-sm);
 }
 
-.delivery-content span i {
-    font-size: 1.5rem;
-} 
+.delivery-option p {
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-normal-3);
+    text-align: left;
+    color: red;
+    width: 100%;
+    word-break: break-word;
+}
 
 /* Contact */
 .contact-content {
@@ -724,6 +724,7 @@ section {
 
     .delivery-content {
         flex-direction: column-reverse;
+        border: 1px solid red;
     }
 
     .contact-content {
