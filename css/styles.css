@@ -1009,8 +1009,8 @@ section {
         font-weight: var(--font-weight-normal-1);
     }
 
-    /*.btn, .btn-no-background  {
+    .btn, .btn-no-background  {
         display: inline-block;
-    }*/
+    }
     
 }
