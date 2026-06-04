@@ -1009,10 +1009,13 @@ section {
     .quote-actions .btn-no-background {
         text-align: center;
         width: 100%;
+    }
+
+    .btn, .btn-no-background  {
+        display: inline-block;
+        padding: 11px 28px;
         font-size: var(--font-size-sm);
         font-weight: var(--font-weight-normal-3);
-        padding: 10px 28px;
-        display: inline-block;
     }
     
 }
