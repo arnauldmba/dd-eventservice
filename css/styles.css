@@ -1011,7 +1011,7 @@ section {
         width: 100%;
         font-size: var(--font-size-sm);
         font-weight: var(--font-weight-normal-3);
-        padding: 11px 28px;
+        padding: 10px 28px;
         display: inline-block;
     }
     
