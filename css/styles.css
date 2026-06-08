@@ -311,7 +311,7 @@ h1, h2, h3, h4, h5, h6 {
     background-color: var(--color-primary);
     color: var(--color-text-white);
     cursor: pointer;
-    padding: 14px 28px;
+    padding: 14px 22px;
 }
 
 .btn-whatsapp {
@@ -515,12 +515,39 @@ section {
     font-family: var(--font-heading);
 }
 
+.article-notice-container{
+    background-color: #3f4fb529;
+    font-size: 0.8rem;
+    padding: 6px 8px;
+    border-radius: 4px;
+    font-weight: var(--font-weight-normal-3);
+}
+
+.price-and-set{
+    display: grid;
+    text-align: end;
+}
+
 .price{
     display: inline-block;
     color: var(--color-primary);
     font-family: var(--font-heading);
     font-size: var(--font-size-xl);
-    font-weight: var(--font-weight-normal-2);
+    font-weight: var(--font-weight-normal-3);
+}
+
+.set{
+    display: inline-block;
+    color: var(--color-primary);
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    font-weight: var(--font-weight-medium);
+}
+
+.quote-add-btn{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
 
 .quote-box {
@@ -1018,5 +1045,24 @@ section {
         font-size: var(--font-size-sm);
         font-weight: var(--font-weight-normal-3);
     }
-    
+
+    .price-and-set{
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        margin-top: 10px;
+    }
+
+    .price-and-set .mobile{
+        display: inline-block;
+        color: var(--color-primary);
+        font-family: var(--font-heading);
+        color: rgb(97, 94, 94);
+        font-size: 0.8rem;
+        font-weight: var(--font-weight-normal-4);
+    }
+
+    .set{
+        display: none;
+    }  
 }
