@@ -843,7 +843,7 @@ section {
     color: var(--color-text-white);
     text-decoration: none;
     margin-right: var(--spacing-xl);
-    font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-normal-1);
 }
 
 .social-media a {
