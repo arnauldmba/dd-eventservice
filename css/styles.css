@@ -317,7 +317,11 @@ h1, h2, h3, h4, h5, h6 {
 .btn-whatsapp {
     background-color: var(--color-whatsapp);
     color: var(--color-text-white);
-    margin-top: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+}
+
+.btn-whatsapp i {
+    margin-right: 4px;
 }
 
 .btn-whatsapp:hover {
@@ -517,15 +521,10 @@ section {
 
 .article-notice-container{
     background-color: #3f4fb529;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     padding: 6px 8px;
     border-radius: 4px;
     font-weight: var(--font-weight-normal-3);
-}
-
-.price-and-set{
-    display: grid;
-    text-align: end;
 }
 
 .price{
@@ -1046,23 +1045,8 @@ section {
         font-weight: var(--font-weight-normal-3);
     }
 
-    .price-and-set{
-        display: flex;
-        align-items: center;
-        gap: 6px;
-        margin-top: 10px;
+    .article-notice-container{
+        font-size: 0.6rem;
+        margin: 8px 0px;
     }
-
-    .price-and-set .mobile{
-        display: inline-block;
-        color: var(--color-primary);
-        font-family: var(--font-heading);
-        color: rgb(97, 94, 94);
-        font-size: 0.8rem;
-        font-weight: var(--font-weight-normal-4);
-    }
-
-    .set{
-        display: none;
-    }  
 }
