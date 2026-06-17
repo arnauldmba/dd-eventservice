@@ -36,6 +36,7 @@ const quoteList = document.querySelector('#quoteList');
 const quoteEmpty = document.querySelector('#quoteEmpty');
 const quoteCount = document.querySelector('#quoteCount');
 const quoteTotal = document.querySelector('#quoteTotal');
+const contactForm = document.querySelector('#contactForm');
 const orderNumberInput = document.querySelector('#orderNumberInput');
 
 const quoteTotalPrice = document.querySelector('#quoteTotalPrice');
@@ -199,18 +200,16 @@ if (quoteContactBtn) {
 
 function generateRequestNumber() {
     const now = new Date();
+    const date = now.toISOString().slice(0, 10).replaceAll('-', '');
+    const random = Math.floor(100000 + Math.random() * 900000);
 
-    const year = now.getFullYear();
-    const month = String(now.getMonth() + 1).padStart(2, '0');
-    const day = String(now.getDate()).padStart(2, '0');
-
-    const randomNumber = Math.floor(100000 + Math.random() * 900000);
-
-    return `D2D-${year}${month}${day}-${randomNumber}`;
+    return `D2D-${date}-${random}`;
 }
 
-if (orderNumberInput) {
-    orderNumberInput.value = generateRequestNumber();
+if (contactForm && orderNumberInput) {
+    contactForm.addEventListener('submit', () => {
+        orderNumberInput.value = generateRequestNumber();
+    });
 }
 
 renderQuote();
