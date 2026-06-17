@@ -36,6 +36,8 @@ const quoteList = document.querySelector('#quoteList');
 const quoteEmpty = document.querySelector('#quoteEmpty');
 const quoteCount = document.querySelector('#quoteCount');
 const quoteTotal = document.querySelector('#quoteTotal');
+const orderNumberInput = document.querySelector('#orderNumberInput');
+
 const quoteTotalPrice = document.querySelector('#quoteTotalPrice');
 const quoteSummaryInput = document.querySelector('#quoteSummaryInput');
 const messageInput = document.querySelector('#message');
@@ -184,10 +186,31 @@ if (quoteClearBtn) {
 if (quoteContactBtn) {
     quoteContactBtn.addEventListener('click', () => {
         const summary = buildQuoteSummary();
+        const requestNumber = orderNumberInput?.value || generateRequestNumber();
+
         if (summary && messageInput && messageInput.value.trim() === '') {
-            messageInput.value = `Hallo, ich möchte ein Angebot anfragen.\n\n${summary}`;
+            messageInput.value = 
+            `Hallo, ich möchte ein Angebot anfragen.\n\n` +
+            `Anfragenummer: ${requestNumber}\n\n` +
+            `${summary}`;
         }
     });
+}
+
+function generateRequestNumber() {
+    const now = new Date();
+
+    const year = now.getFullYear();
+    const month = String(now.getMonth() + 1).padStart(2, '0');
+    const day = String(now.getDate()).padStart(2, '0');
+
+    const randomNumber = Math.floor(100000 + Math.random() * 900000);
+
+    return `D2D-${year}${month}${day}-${randomNumber}`;
+}
+
+if (orderNumberInput) {
+    orderNumberInput.value = generateRequestNumber();
 }
 
 renderQuote();
