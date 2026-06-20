@@ -200,10 +200,12 @@ if (quoteContactBtn) {
 
 function generateRequestNumber() {
     const now = new Date();
-    const date = now.toISOString().slice(0, 10).replaceAll('-', '');
+    //const date = now.toISOString().slice(0, 10).replaceAll('-', '');
     const random = Math.floor(100000 + Math.random() * 900000);
 
-    return `D2D-${date}-${random}`;
+    //return `D2D-${date}-${random}`;
+
+    return `D2D-${random}`;
 }
 
 if (contactForm && orderNumberInput) {
